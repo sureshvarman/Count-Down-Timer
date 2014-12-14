@@ -3,7 +3,7 @@ Count-Down-Timer
 Jquery Count Down Timer For Counting Down The Timer
 
 Getting Started
-================
+-------------------------------------------------------------------------------------------------------------------------
 <html>
 <head>
     <title>Timer</title>
@@ -32,5 +32,5 @@ Getting Started
 </html>
 
 Dependencies
-============
+-------------------------------------------------------------------------------------------------------------------------
 jQuery greater than or equal to version 1.5.

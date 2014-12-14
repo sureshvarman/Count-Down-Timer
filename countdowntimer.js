@@ -1,3 +1,9 @@
+/*
+ * Author - Suresh varman K
+ * Version - 1.0.0
+ * Release - 14th December 2014
+ * Copyright (c) 2014 - 2018 Suresh varman
+*/
 (function ($) {
 
     $.fn.timer = function (options) {

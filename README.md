@@ -2,7 +2,7 @@ Count-Down-Timer
 ================
 Jquery Count Down Timer For Counting Down The Timer
 
-In HTML
+Getting Started
 ================
 <html>
 <head>

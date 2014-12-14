@@ -4,12 +4,9 @@ Jquery Count Down Timer For Counting Down The Timer
 
 Getting Started
 -------------------------------------------------------------------------------------------------------------------------
-<html>
-<head>
-    <title>Timer</title>
 <script src='http://code.jquery.com/jquery-1.5.1.js'></script>
 <script src='countdowntimer.min.js'></script>	
-
+<div class="timer"></div>
 <script type="text/javascript">
     window.onload = function () {
 	  $('.timer').timer({
@@ -22,14 +19,8 @@ Getting Started
 	  });
 }
 </script>
-</head>
-<body>
-<h1>Count Down Timer</h1>
-    <div class="timer">
-        
-    </div>
-</body>
-</html>
+
+
 
 Dependencies
 -------------------------------------------------------------------------------------------------------------------------

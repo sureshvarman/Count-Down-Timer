@@ -1,83 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
 
-    <title>Count-down-timer by sureshvarman</title>
-  </head>
+  <title>Count-down-timer</title>
+  <meta name="description" content="Count Down Timer">
 
-  <body>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
     <header>
-      <div class="inner">
-        <h1>Count-down-timer</h1>
-        <h2>Count Down Timer</h2>
-        <a href="https://github.com/sureshvarman/Count-Down-Timer" class="button"><small>View project on</small> GitHub</a>
-      </div>
+      <h1 class="title">Count-down-timer</h1>
     </header>
+    <div id="container">
+      <p class="tagline">Count Down Timer</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/sureshvarman/Count-Down-Timer/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/sureshvarman/Count-Down-Timer/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/sureshvarman/Count-Down-Timer" class="code">View Count-down-timer on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h2>
+<a id="count-down-timer" class="anchor" href="#count-down-timer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Count-Down-Timer</h2>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<p>Jquery Count Down Timer For Counting Down The Timer</p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>Include Jquery library</p>
+
+
+
+<p>Include Count-Down-Timer Plugin</p>
+
+
+
+<p>Create your timer as</p>
+
+<pre><code>  $('.timer').timer({
+  endDateAndTime: new Date("12/14/2014 13:30:00"),
+  separator:':',
+  incremental:true,
+  timeUp : function() { $('.timer').css('color','#FF0000'); },
+  callbackBefore:(60*60*2),
+  callbackBeforefunction : function() { $('.timer').css('color','#00FF00'); }
+  });
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<table>
+<tr> <td>endDateAndTime</td> <td>Javascript Date Object towards which your timer going to run</td> </tr>
+<tr> <td>seperator</td> <td>seperator between days, hours, minutes and seconds</td> </tr>
+<tr> <td>incremental</td> <td>boolean if true timer runs even after endDateAndTime is reached</td> </tr>
+<tr> <td>timeup</td> <td>A callback function to run after endDateAndTime is reached</td> </tr>
+<tr> <td>callbackBefore</td> <td>Before how many seconds the callbackBeforefunction needs to be executed</td> </tr>
+<tr> <td>callbackBeforefunction</td> <td>function to be executed before given callbackBefore seconds</td> </tr>
+</table>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
 
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/sureshvarman/Count-Down-Timer/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/sureshvarman/Count-Down-Timer/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/sureshvarman/Count-Down-Timer"></a> is maintained by <a href="https://github.com/sureshvarman">sureshvarman</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+<p>jQuery greater than or equal to version 1.5.</p>
+        </article>
       </div>
     </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/sureshvarman" class="avatar"><img src="https://avatars1.githubusercontent.com/u/5591566?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/sureshvarman">sureshvarman</a> maintains <a href="https://github.com/sureshvarman/Count-Down-Timer">Count-down-timer</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/sureshvarman/Count-Down-Timer/tarball/master" class="tar">tar</a><a href="https://github.com/sureshvarman/Count-Down-Timer/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
 
   
-  </body>
+</body>
 </html>
